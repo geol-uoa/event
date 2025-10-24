@@ -1,31 +1,16 @@
-import { supabase } from '@/lib/supabase'
 import { BookingTable } from '@/components/booking-table'
 
-export const revalidate = 60 // Revalidate data every 60 seconds
+// Static event dates - will be fetched on the client side
+const defaultEventDates = [
+  { date: '2026-02-02', displayDate: '', count: 0 },
+  { date: '2026-02-03', displayDate: '', count: 0 },
+  { date: '2026-02-04', displayDate: '', count: 0 },
+  { date: '2026-02-05', displayDate: '', count: 0 },
+  { date: '2026-02-06', displayDate: '', count: 0 },
+]
 
-async function getEventDates() {
-  const { data, error } = await supabase.rpc('get_date_slot_counts')
-
-  if (error) {
-    console.error('Error fetching slot counts:', error)
-    // Return a default structure in case of error
-    return [
-      { date: '2026-02-02', displayDate: '', count: 0 },
-      { date: '2026-02-03', displayDate: '', count: 0 },
-      { date: '2026-02-04', displayDate: '', count: 0 },
-      { date: '2026-02-05', displayDate: '', count: 0 },
-      { date: '2026-02-06', displayDate: '', count: 0 },
-    ]
-  }
-
-  return data.map((item: { date: string; count: number }) => ({
-    ...item,
-    displayDate: '' // displayDate will be generated on the client
-  }))
-}
-
-export default async function Page() {
-  const eventDates = await getEventDates()
+export default function Page() {
+  const eventDates = defaultEventDates
 
   return (
     <div className="h-screen bg-background text-foreground flex flex-col overflow-hidden">

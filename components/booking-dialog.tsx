@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { submitBooking } from "@/app/actions/submit-booking"
 
 import {
   Dialog,
@@ -71,16 +70,29 @@ export function BookingDialog({
 
     setErrorMessage(null)
 
-    const result = await submitBooking({
-      ...data,
-      selectedDate,
-    })
+    try {
+      const response = await fetch('/api/submit-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...data,
+          selectedDate,
+        }),
+      })
 
-    if (result.success) {
-      setSuccessMessage("Η κράτηση υποβλήθηκε επιτυχώς!")
-      setTimeout(() => onOpenChange(false), 1500)
-    } else {
-      setErrorMessage(result.error || "Σφάλμα κατά την υποβολή")
+      const result = await response.json()
+
+      if (result.success) {
+        setSuccessMessage("Η κράτηση υποβλήθηκε επιτυχώς!")
+        setTimeout(() => onOpenChange(false), 1500)
+      } else {
+        setErrorMessage(result.error || "Σφάλμα κατά την υποβολή")
+      }
+    } catch (error) {
+      console.error('Error submitting booking:', error)
+      setErrorMessage("Σφάλμα κατά την υποβολή της κράτησης")
     }
   }
 
