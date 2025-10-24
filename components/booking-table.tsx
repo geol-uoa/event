@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {
   Table,
   TableHeader,
@@ -24,31 +24,7 @@ interface BookingTableProps {
 }
 
 export function BookingTable({ initialEventDates }: BookingTableProps) {
-  const [eventDates, setEventDates] = useState<EventDate[]>(initialEventDates)
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Fetch slot counts from Supabase on component mount
-  useEffect(() => {
-    const fetchSlotCounts = async () => {
-      try {
-        const response = await fetch('/api/get-slot-counts')
-        const data = await response.json()
-        if (data.success) {
-          setEventDates(data.dates)
-        }
-      } catch (error) {
-        console.error('Error fetching slot counts:', error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    fetchSlotCounts()
-
-    // Refresh slot counts every 10 seconds
-    const interval = setInterval(fetchSlotCounts, 10000)
-    return () => clearInterval(interval)
-  }, [])
+  const [eventDates] = useState<EventDate[]>(initialEventDates)
   const [dialogOpen, setDialogOpen] = useState(false)
   const [selectedDate, setSelectedDate] = useState<EventDate | null>(null)
 
