@@ -80,18 +80,11 @@ export default async function Page() {
             />
             
             {/* Center text */}
-            <div className="text-center my-2 sm:my-0">
-              <p className="text-xs font-medium">
-                Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
-              </p>
               <p className="text-[10px] text-muted-foreground">
-                Email: contact@geol.uoa.gr
+                Email: ...
               </p>
               <p className="text-[10px] text-muted-foreground mt-1">
-                Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+                Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
               </p>
             </div>
             
