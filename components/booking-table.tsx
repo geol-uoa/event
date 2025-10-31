@@ -94,7 +94,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                 Ημερομηνία
               </TableHead>
               <TableHead className="font-semibold text-foreground py-4 px-6 text-center">
-                Διαθέσιμες Θέσεις
+                Κρατήσεις Σχολείων
               </TableHead>
               <TableHead className="font-semibold text-foreground py-4 px-6 text-right">
               </TableHead>
@@ -102,7 +102,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
           </TableHeader>
           <TableBody>
             {eventDates.map((event: EventDate) => {
-              const isFull = event.count >= 60
+              const isFull = event.count >= 2
               const dateBookings = bookings[event.date] || []
               
               return (
@@ -119,7 +119,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                           ? 'text-red-700 bg-red-50 border border-red-200'
                           : 'text-green-700 bg-green-50 border border-green-200'
                       }`}>
-                        {event.count}/60
+                        {event.count}/2
                       </span>
                     </TableCell>
                     <TableCell className="py-5 px-6 text-right">

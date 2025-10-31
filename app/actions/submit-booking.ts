@@ -22,7 +22,7 @@ export async function submitBooking(formData: {
     return { success: false, error: 'Σφάλμα κατά την ανάκτηση διαθέσιμων θέσεων' }
   }
 
-  if (countData >= 60) {
+  if (countData >= 2) {
     return { success: false, error: 'Δεν υπάρχουν διαθέσιμες θέσεις για αυτή την ημερομηνία' }
   }
 

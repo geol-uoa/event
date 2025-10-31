@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (countData >= 60) {
+    if (countData >= 2) {
       return NextResponse.json(
         { success: false, error: 'Δεν υπάρχουν διαθέσιμες θέσεις για αυτή την ημερομηνία' },
         { status: 400 }
