@@ -80,6 +80,7 @@ export default async function Page() {
             />
             
             {/* Center text */}
+            <div>
               <p className="text-[10px] text-muted-foreground">
                 Email: ...
               </p>
