@@ -32,13 +32,22 @@ export default async function Page() {
       {/* Header Section */}
       <header className="border-b border-border bg-background flex-shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-          <div className="space-y-0.5">
-            <h1 className="text-lg sm:text-xl font-bold text-foreground">
-              Δραστηριότητες Γεωλογίας και Γεωπεριβάλλοντος
-            </h1>
-            <p className="text-xs sm:text-sm text-muted-foreground">
-              2-6 Φεβρουαρίου 2026
-            </p>
+          <div className="flex items-center justify-between">
+            <div className="space-y-0.5">
+              <h1 className="text-lg sm:text-xl font-bold text-foreground">
+                Δραστηριότητες Γεωλογίας και Γεωπεριβάλλοντος
+              </h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                2-6 Φεβρουαρίου 2026
+              </p>
+            </div>
+            <div className="hidden sm:block">
+              <img 
+                src="https://www.geol.uoa.gr/fileadmin/uploads/tx_gridelements/logo_geol_01.png" 
+                alt="Τμήμα Γεωλογίας και Γεωπεριβάλλοντος" 
+                className="h-16 object-contain" 
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -54,7 +63,7 @@ export default async function Page() {
               </h2>
               <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 Παρακαλούμε επιλέξτε μία από τις διαθέσιμες ημερομηνίες για το σχολείο σας.
-                Κάθε ημερομηνία έχει περιορισμένες θέσεις (μέγιστο 2 σχολεία).
+                Κάθε ημερομηνία έχει περιορισμένες θέσεις (μέγιστο 60 μαθητές ανά σχολείο-συνεδρία).
               </p>
             </div>
 
@@ -69,16 +78,26 @@ export default async function Page() {
       {/* Footer Section */}
       <footer className="border-t border-border bg-background flex-shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-          <div className="text-center space-y-0.5">
-            <p className="text-xs sm:text-sm font-medium">
-              Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
-            </p>
-            <p className="text-xs sm:text-sm text-muted-foreground">
-              Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Email: contact@geol.uoa.gr
-            </p>
+          <div className="flex flex-col items-center space-y-3">
+            <img 
+              src="https://www.geol.uoa.gr/typo3conf/ext/uoa_website/Resources/Public/Images/footer_logo.png" 
+              alt="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών" 
+              className="h-12 object-contain mb-2" 
+            />
+            <div className="text-center space-y-0.5">
+              <p className="text-xs sm:text-sm font-medium">
+                Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Email: contact@geol.uoa.gr
+              </p>
+              <p className="text-xs text-muted-foreground mt-2">
+                Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών
+              </p>
+            </div>
           </div>
         </div>
       </footer>

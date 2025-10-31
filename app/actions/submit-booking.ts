@@ -7,9 +7,11 @@ export async function submitBooking(formData: {
   schoolName: string
   contactName: string
   contactEmail: string
+  contactPhone?: string
+  comments?: string
   selectedDate: string
 }) {
-  const { schoolName, contactName, contactEmail, selectedDate } = formData
+  const { schoolName, contactName, contactEmail, contactPhone, comments, selectedDate } = formData
 
   // Check current slot count
   const { data: countData, error: countError } = await supabase
@@ -20,7 +22,7 @@ export async function submitBooking(formData: {
     return { success: false, error: 'Σφάλμα κατά την ανάκτηση διαθέσιμων θέσεων' }
   }
 
-  if (countData >= 2) {
+  if (countData >= 60) {
     return { success: false, error: 'Δεν υπάρχουν διαθέσιμες θέσεις για αυτή την ημερομηνία' }
   }
 
@@ -32,6 +34,8 @@ export async function submitBooking(formData: {
       school_name: schoolName,
       contact_name: contactName,
       contact_email: contactEmail,
+      contact_phone: contactPhone,
+      comments: comments,
     })
 
   if (insertError) {

@@ -55,7 +55,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
           </TableHeader>
           <TableBody>
             {eventDates.map((event) => {
-              const isFull = event.count >= 2
+              const isFull = event.count >= 60
               return (
                 <TableRow
                   key={event.date}
@@ -70,7 +70,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                         ? 'text-red-700 bg-red-50 border border-red-200'
                         : 'text-green-700 bg-green-50 border border-green-200'
                     }`}>
-                      {event.count}/2
+                      {event.count}/60
                     </span>
                   </TableCell>
                   <TableCell className="py-5 px-6 text-right">
