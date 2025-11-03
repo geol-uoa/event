@@ -86,7 +86,7 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
 
   return (
     <>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto overflow-y-visible max-w-full rounded-lg">
         <Table>
           <TableHeader>
             <TableRow className="bg-secondary/50 hover:bg-secondary/50">

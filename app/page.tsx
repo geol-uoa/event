@@ -61,7 +61,7 @@ export default async function Page() {
             </div>
 
             {/* Table Section */}
-            <div className="bg-card border border-border rounded-lg shadow-sm overflow-hidden">
+            <div className="bg-card border border-border rounded-lg shadow-sm overflow-hidden min-h-0">
               <BookingTable initialEventDates={eventDates} />
             </div>
           </div>

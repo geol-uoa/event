@@ -102,7 +102,7 @@ export function BookingDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px] mx-4 sm:mx-auto rounded-lg">
+      <DialogContent className="mx-4 max-w-[500px] max-w-[calc(100vw-2rem)] rounded-lg">
         <DialogHeader className="space-y-2 pb-2">
           <DialogTitle className="text-2xl font-bold text-foreground">
             Κράτηση Ημερομηνίας
