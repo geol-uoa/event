@@ -103,7 +103,7 @@ export function BookingDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="mx-4 max-w-[min(500px,calc(100vw-2rem))] rounded-lg">
-        <DialogHeader className="space-y-2 pb-2">
+        <DialogHeader className="space-y-1.5 pb-1">
           <DialogTitle className="text-2xl font-bold text-foreground">
             Κράτηση Ημερομηνίας
           </DialogTitle>
@@ -114,7 +114,7 @@ export function BookingDialog({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-5 py-2">
+        <div className="space-y-3">
           {errorMessage && (
             <div className="rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-800">
               <p className="font-semibold mb-1">Σφάλμα</p>
@@ -129,7 +129,7 @@ export function BookingDialog({
           )}
 
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
               <FormField
                 control={form.control}
                 name="schoolName"
@@ -216,7 +216,7 @@ export function BookingDialog({
                     </FormLabel>
                     <FormControl>
                       <textarea
-                        className="flex w-full rounded-md border border-border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[80px] resize-y"
+                        className="flex w-full rounded-md border border-border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[60px] resize-y"
                         {...field}
                       />
                     </FormControl>
@@ -225,7 +225,7 @@ export function BookingDialog({
                 )}
               />
 
-              <DialogFooter className="gap-2 sm:gap-0 pt-2">
+              <DialogFooter className="gap-2 sm:gap-0 pt-1">
                 <Button
                   type="button"
                   variant="outline"
