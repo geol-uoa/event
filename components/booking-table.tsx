@@ -90,13 +90,13 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
         <Table>
           <TableHeader>
             <TableRow className="bg-secondary/50 hover:bg-secondary/50">
-              <TableHead className="font-semibold text-foreground py-4 px-6">
+              <TableHead className="font-semibold text-foreground py-1.5 px-3 text-xs">
                 Ημερομηνία
               </TableHead>
-              <TableHead className="font-semibold text-foreground py-4 px-6 text-center">
+              <TableHead className="font-semibold text-foreground py-1.5 px-3 text-center text-xs">
                 Κρατήσεις Σχολείων
               </TableHead>
-              <TableHead className="font-semibold text-foreground py-4 px-6 text-right">
+              <TableHead className="font-semibold text-foreground py-1.5 px-3 text-right text-xs">
               </TableHead>
             </TableRow>
           </TableHeader>
@@ -110,11 +110,11 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                   <TableRow
                     className="hover:bg-secondary/30 transition-colors duration-150"
                   >
-                    <TableCell className="py-5 px-6 font-medium text-foreground">
+                    <TableCell className="py-2 px-4 font-medium text-foreground">
                       {getDisplayDate(event.date)}
                     </TableCell>
-                    <TableCell className="py-5 px-6 text-center">
-                      <span className={`inline-flex items-center justify-center min-w-[70px] px-3 py-1.5 text-sm font-semibold rounded-md transition-colors ${
+                    <TableCell className="py-2 px-4 text-center">
+                      <span className={`inline-flex items-center justify-center min-w-[60px] px-2 py-1 text-xs font-semibold rounded-md transition-colors ${
                         isFull
                           ? 'text-red-700 bg-red-50 border border-red-200'
                           : 'text-green-700 bg-green-50 border border-green-200'
@@ -122,14 +122,14 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                         {event.count}/2
                       </span>
                     </TableCell>
-                    <TableCell className="py-5 px-6 text-right">
+                    <TableCell className="py-2 px-4 text-right">
                       <Button
                         disabled={isFull}
                         onClick={() => {
                           setSelectedDate(event)
                           setDialogOpen(true)
                         }}
-                        className="min-w-[110px]"
+                        className="min-w-[80px] text-xs"
                         variant={isFull ? "outline" : "default"}
                       >
                         {isFull ? 'Πλήρης' : 'Επιλογή'}
@@ -142,10 +142,10 @@ export function BookingTable({ initialEventDates }: BookingTableProps) {
                       key={booking.id} 
                       className="bg-secondary/10 border-t border-dashed border-secondary"
                     >
-                      <TableCell colSpan={3} className="py-3 px-6">
-                        <div className="flex flex-col space-y-1">
+                      <TableCell colSpan={3} className="py-1.5 px-4">
+                        <div className="flex flex-col space-y-0.5">
                           <div className="flex justify-between items-start">
-                            <span className="font-medium text-sm">{booking.school_name}</span>
+                            <span className="font-medium text-xs">{booking.school_name}</span>
                             <span className="text-xs text-muted-foreground">{booking.contact_name}</span>
                           </div>
                           

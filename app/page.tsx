@@ -31,7 +31,7 @@ export default async function Page() {
     <div className="h-screen bg-background text-foreground flex flex-col overflow-hidden">
       {/* Header Section */}
       <header className="border-b border-border bg-background flex-shrink-0">
-        <div className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+        <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
           <div className="flex items-center">
             <div className="space-y-0.5">
               <h1 className="text-lg sm:text-xl font-bold text-foreground">
@@ -47,14 +47,14 @@ export default async function Page() {
 
       {/* Main Content Section */}
       <main className="flex-1 overflow-y-auto">
-        <div className="px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-          <div className="space-y-4 sm:space-y-5">
+        <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
+          <div className="space-y-2 sm:space-y-3">
             {/* Introduction */}
-            <div className="text-center space-y-1.5">
-              <h2 className="text-lg sm:text-xl font-semibold">
+            <div className="text-center space-y-1">
+              <h2 className="text-base sm:text-lg font-semibold">
                 Επιλέξτε Ημερομηνία
               </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">
                 Παρακαλούμε επιλέξτε μία από τις διαθέσιμες ημερομηνίες για το σχολείο σας.
                 Κάθε ημερομηνία έχει περιορισμένες θέσεις για σχολεία. Κάθε συνεδρία μπορεί να φιλοξενήσει μέχρι 60 μαθητές.
               </p>
@@ -70,7 +70,7 @@ export default async function Page() {
 
       {/* Footer Section */}
       <footer className="border-t border-border bg-background flex-shrink-0">
-        <div className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+        <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
             {/* Left logo (University) */}
             <img 
