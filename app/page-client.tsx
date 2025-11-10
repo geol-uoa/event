@@ -36,9 +36,6 @@ export function PageClient({ initialEventDates }: PageClientProps) {
               <h1 className="text-lg sm:text-xl font-bold text-foreground">
                 Open Week
               </h1>
-              <p className="text-xs sm:text-sm text-muted-foreground">
-                2-6 Φεβρουαρίου 2026
-              </p>
               <Button
                 onClick={() => setInstructionsOpen(true)}
                 size="sm"
