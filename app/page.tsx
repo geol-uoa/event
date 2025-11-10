@@ -41,7 +41,7 @@ export default async function Page() {
             />
             
             {/* Center text */}
-            <div className="space-y-0.5">
+            <div className="space-y-0.5 text-center">
               <h1 className="text-lg sm:text-xl font-bold text-foreground">
                 Open Week
               </h1>
@@ -86,7 +86,7 @@ export default async function Page() {
       {/* Footer Section */}
       <footer className="border-t border-border bg-background flex-shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
-          <div>
+          <div className="text-center">
             <p className="text-[10px] text-muted-foreground">
               Email: <a href="mailto:geology4all@geol.uoa.gr" className="hover:underline">geology4all@geol.uoa.gr</a>
             </p>
