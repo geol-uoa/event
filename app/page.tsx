@@ -82,7 +82,7 @@ export default async function Page() {
             {/* Center text */}
             <div>
               <p className="text-[10px] text-muted-foreground">
-                Email: ...
+                Email: <a href="mailto:geology4all@geol.uoa.gr" className="hover:underline">geology4all@geol.uoa.gr</a>
               </p>
               <p className="text-[10px] text-muted-foreground mt-1">
                 Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
