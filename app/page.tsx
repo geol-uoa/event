@@ -32,7 +32,15 @@ export default async function Page() {
       {/* Header Section */}
       <header className="border-b border-border bg-background flex-shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
-          <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+            {/* Left logo (University) */}
+            <img 
+              src="https://www.geol.uoa.gr/typo3conf/ext/uoa_website/Resources/Public/Images/footer_logo.png" 
+              alt="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών" 
+              className="h-8 object-contain mx-auto sm:mx-0" 
+            />
+            
+            {/* Center text */}
             <div className="space-y-0.5">
               <h1 className="text-lg sm:text-xl font-bold text-foreground">
                 Open Week
@@ -41,6 +49,13 @@ export default async function Page() {
                 2-6 Φεβρουαρίου 2026
               </p>
             </div>
+            
+            {/* Right logo (Geology) */}
+            <img 
+              src="https://www.geol.uoa.gr/fileadmin/uploads/tx_gridelements/logo_geol_01.png" 
+              alt="Τμήμα Γεωλογίας και Γεωπεριβάλλοντος" 
+              className="h-8 object-contain mx-auto sm:mx-0 order-first sm:order-last" 
+            />
           </div>
         </div>
       </header>
@@ -71,30 +86,13 @@ export default async function Page() {
       {/* Footer Section */}
       <footer className="border-t border-border bg-background flex-shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-2 sm:py-3">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-            {/* Left logo (University) */}
-            <img 
-              src="https://www.geol.uoa.gr/typo3conf/ext/uoa_website/Resources/Public/Images/footer_logo.png" 
-              alt="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών" 
-              className="h-8 object-contain mx-auto sm:mx-0" 
-            />
-            
-            {/* Center text */}
-            <div>
-              <p className="text-[10px] text-muted-foreground">
-                Email: <a href="mailto:geology4all@geol.uoa.gr" className="hover:underline">geology4all@geol.uoa.gr</a>
-              </p>
-              <p className="text-[10px] text-muted-foreground mt-1">
-                Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
-              </p>
-            </div>
-            
-            {/* Right logo (Geology) */}
-            <img 
-              src="https://www.geol.uoa.gr/fileadmin/uploads/tx_gridelements/logo_geol_01.png" 
-              alt="Τμήμα Γεωλογίας και Γεωπεριβάλλοντος" 
-              className="h-8 object-contain mx-auto sm:mx-0 order-first sm:order-last" 
-            />
+          <div>
+            <p className="text-[10px] text-muted-foreground">
+              Email: <a href="mailto:geology4all@geol.uoa.gr" className="hover:underline">geology4all@geol.uoa.gr</a>
+            </p>
+            <p className="text-[10px] text-muted-foreground mt-1">
+              Copyright © 2025 Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
+            </p>
           </div>
         </div>
       </footer>
