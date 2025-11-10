@@ -41,9 +41,8 @@ export function PageClient({ initialEventDates }: PageClientProps) {
               </p>
               <Button
                 onClick={() => setInstructionsOpen(true)}
-                variant="outline"
                 size="sm"
-                className="mt-1 text-xs h-7 px-3"
+                className="mt-1 text-xs h-7 px-3 bg-black text-white hover:bg-gray-800"
               >
                 Οδηγίες
               </Button>

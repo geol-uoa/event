@@ -19,16 +19,7 @@ export function InstructionsDialog({
 }: InstructionsDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="mx-4 max-w-[min(700px,calc(100vw-2rem))] rounded-lg max-h-[85vh] overflow-y-auto">
-        <DialogHeader className="space-y-2 pb-2">
-          <DialogTitle className="text-2xl font-bold text-foreground">
-            Οδηγίες
-          </DialogTitle>
-          <DialogDescription className="text-sm">
-            Επισκέψεις Σχολείων στο Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
-          </DialogDescription>
-        </DialogHeader>
-
+      <DialogContent className="mx-4 max-w-[min(900px,calc(100vw-2rem))] rounded-lg max-h-[85vh] overflow-y-auto">
         <div className="space-y-4 text-sm leading-relaxed text-foreground">
           <h3 className="font-bold text-base">
             Επισκέψεις Σχολείων στο Τμήμα Γεωλογίας και Γεωπεριβάλλοντος του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών για το ακαδημαϊκό έτος 2025-2026
