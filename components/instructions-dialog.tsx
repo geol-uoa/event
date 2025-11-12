@@ -24,9 +24,6 @@ export function InstructionsDialog({
           <DialogTitle className="text-2xl font-bold text-foreground">
             Οδηγίες
           </DialogTitle>
-          <DialogDescription className="text-sm">
-            Επισκέψεις Σχολείων στο Τμήμα Γεωλογίας και Γεωπεριβάλλοντος
-          </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4 text-sm leading-relaxed text-foreground">
@@ -78,3 +75,4 @@ export function InstructionsDialog({
     </Dialog>
   )
 }
+
